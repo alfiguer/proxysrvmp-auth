@@ -46,7 +46,7 @@ public class UsuarioDeserializer extends StdDeserializer<Usuario> {
 				String fieldname = parser.getCurrentName();
 				parser.nextToken(); // move to next token in string
 				if ("CodigoUsuario".equals(fieldname)) {
-					usuario.setCodigo(parser.getText());
+					usuario.setCodigoUsuario(parser.getText());
 				} else if ("Nombres".equals(fieldname)) {
 					usuario.setNombres(parser.getText());
 				} else if ("Apellidos".equals(fieldname)) {

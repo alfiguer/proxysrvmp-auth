@@ -18,7 +18,7 @@ import java.util.Optional;
  */
 public class Usuario {
 
-	private String codigo;
+	private String codigoUsuario;
 
 	private String nombres;
 
@@ -49,13 +49,15 @@ public class Usuario {
 		super();
 	}
 
-	public String getCodigo() {
-		return codigo;
+	public String getCodigoUsuario() {
+		return codigoUsuario;
 	}
 
-	public void setCodigo(String codigo) {
-		this.codigo = codigo;
+
+	public void setCodigoUsuario(String codigoUsuario) {
+		this.codigoUsuario = codigoUsuario;
 	}
+
 
 	public String getNombres() {
 		return nombres;
@@ -148,8 +150,8 @@ public class Usuario {
 	@Override
 	public String toString() {
 		StringBuilder trace = new StringBuilder();
-		if (Optional.ofNullable(this.getCodigo()).isPresent()) {
-			trace.append("codigo=").append(this.getCodigo()).append(",");
+		if (Optional.ofNullable(this.getCodigoUsuario()).isPresent()) {
+			trace.append("codigoUsuario=").append(this.getCodigoUsuario()).append(",");
 		}
 		if (Optional.ofNullable(this.getNombres()).isPresent()) {
 			trace.append("nombres=").append(this.getNombres()).append(",");
@@ -196,7 +198,7 @@ public class Usuario {
 
 	public static final void main(String[] args) {
 		Usuario usuario = new Usuario();
-		usuario.setCodigo("1299437_3234");
+		usuario.setCodigoUsuario("1299437_3234");
 		usuario.setNombres("Miguel Angel");
 		usuario.setApellidos("Garrido");
 		usuario.setRut("15.094.974-2");
